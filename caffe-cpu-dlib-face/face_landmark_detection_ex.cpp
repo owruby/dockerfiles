@@ -157,7 +157,7 @@ int main(int argc, char** argv)
 				    std::string filename = patch::to_string(i) + "_" + dent->d_name;
 				    std::string save_path = "./result_faces/" + filename;				    
 
-				    dlib::chip_details img_details = get_face_chip_details(shapes[i]);
+				    dlib::chip_details img_details = get_face_chip_details(shapes[i], 256);
 				    cout << filename << ':' << img_details.rect << ':' << img_details.angle << endl;
 				    save_jpeg(face_chips[i], save_path);
 				}
