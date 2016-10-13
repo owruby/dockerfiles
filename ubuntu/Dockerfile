@@ -12,6 +12,9 @@ RUN apt-get update && \
     liblapack-dev \ 
     gfortran \
     git \
+    wget \
+    curl \
+    make \
     python3 \
     python3-pip \
     python3-numpy \
@@ -31,6 +34,4 @@ RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyen
 # reload .bash_profile
 RUN /bin/bash -c 'source ~/.bash_profile'
 RUN apt-get install -y --no-install-recommends libssl-dev openssl
-
-# pyenv install cannot be installed in this docker version.
-# RUN ["/bin/bash", "-c", "/root/.pyenv/bin/pyenv install 3.5.1"]
+RUN ["/bin/bash", "-c", "/root/.pyenv/bin/pyenv install 3.5.1"]
