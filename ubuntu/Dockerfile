@@ -35,3 +35,4 @@ RUN git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyen
 RUN /bin/bash -c 'source ~/.bash_profile'
 RUN apt-get install -y --no-install-recommends libssl-dev openssl
 RUN ["/bin/bash", "-c", "/root/.pyenv/bin/pyenv install 3.5.1"]
+RUN ["/bin/bash", "-c", "/root/.pyenv/bin/pyenv global 3.5.1"]
