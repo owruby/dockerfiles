@@ -47,3 +47,5 @@ RUN make -j8 pycaffe
 # install draw tools
 RUN apt-get install -y --no-install-recommends graphviz && \
     pip install pydot
+
+ENV PYTHONPATH=/root/caffe/python:$PYTHONPATH
